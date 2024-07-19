@@ -2,464 +2,255 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Bilael Develops</title>
-
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
-    <link rel="stylesheet" href="assets/vendors/iconly/bold.css">
-    <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
-    <link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.css">
-    <link rel="stylesheet" href="assets/css/app.css">
-    <link rel="shortcut icon" href="assets/images/favcon2.png" type="image/x-icon">
-    <link rel="stylesheet" href="assets/vendors/simple-datatables/style.css">
-    
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Dashboard | BilalDevelops</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="<?= base_url() ?>assets/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="<?= base_url() ?>assets/vendors/base/vendor.bundle.base.css">
+    <!-- endinject -->
+    <!-- plugin css for this page -->
+    <link rel="stylesheet" href="<?= base_url() ?>assets/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="<?= base_url() ?>assets/css/style.css">
+    <!-- endinject -->
+    <link rel="shortcut icon" href="<?= base_url() ?>assets/images/favicon.png">
 </head>
+<style>
+.loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url("<?= base_url() ?>assets/images/faviconnew.png") 50% 50% no-repeat white;
+    opacity: 1;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+</style>
+
 <body>
-    <div id="app">
-        <div id="sidebar" class="active" >
-            <div class="sidebar-wrapper active">
-                <div class="sidebar-header">
-                    <div class="d-flex justify-content-between">
-                        <div class="logo">
-                            <!-- <h5 style="color:#ff7a57">Bilael Develops</h5>
-                            <h6>Admin Panel</h6> -->
-                             <a href="index.html"><img style="width:200px; height:50px" src="assets/images/logo22.png" alt="Logo" srcset=""></a> 
-                        </div>
-                        <div class="toggler">
-                            <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
-                        </div>
-                    </div>
+    <div class="container-scroller">
+        <!-- partial:partials/_navbar.html -->
+        <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+            <div class="navbar-brand-wrapper d-flex justify-content-center">
+                <div class="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center w-100">
+                    <a class="navbar-brand brand-logo" href="<?= base_url() ?>Dashboard"><img
+                            src="<?= base_url() ?>assets/images/logo22.png" style="width:180px; height:32px"
+                            alt="logo" /></a>
+                    <a class="navbar-brand brand-logo-mini" href="<?= base_url() ?>Dashboard"><img
+                            src="<?= base_url() ?>assets/images/favicon.png" alt="logo" /></a>
+                    <button class="navbar-toggler navbar-toggler align-self-center" type="button"
+                        data-toggle="minimize">
+                        <span class="mdi mdi-sort-variant"></span>
+                    </button>
                 </div>
-                <div class="sidebar-menu">
-                    <ul class="menu">
-                        <!-- {{-- <li class="sidebar-title">Menu</li> --}} -->
-
-                        <li class="sidebar-item active ">
-                            <a href="<?=base_url()?>Dashboard" class='sidebar-link'>
-                                <i class="bi bi-grid-fill"></i>
-                                <span>Dashboard</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a href="<?=base_url()?>Projects" class='sidebar-link'>
-                                <i class="bi bi-stack"></i>
-                                <span>Projects</span>
-                            </a>
-                        </li>    
-                        <li class="sidebar-item">
-                            <a href="<?=base_url()?>Contacts" class='sidebar-link'>
-                                <i class="bi bi-stack"></i>
-                                <span>Contacts</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a href="<?=base_url()?>Hired" class='sidebar-link'>
-                                <i class="bi bi-person-badge-fill"></i>
-                                <span>Hired Requests</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a href="/settings" class='sidebar-link'>
-                                <i class="bi bi-life-preserver"></i>
-                                <span>Settings</span>
-                            </a>
-                        </li>
-                        
-
-                        <!-- {{-- <li class="sidebar-item  has-sub">
-                            <a href="#" class='sidebar-link'>
-                                <i class="bi bi-stack"></i>
-                                <span>Components</span>
-                            </a>
-                            <ul class="submenu ">
-                                <li class="submenu-item ">
-                                    <a href="component-alert.html">Alert</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="component-badge.html">Badge</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="component-breadcrumb.html">Breadcrumb</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="component-button.html">Button</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="component-card.html">Card</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="component-carousel.html">Carousel</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="component-dropdown.html">Dropdown</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="component-list-group.html">List Group</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="component-modal.html">Modal</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="component-navs.html">Navs</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="component-pagination.html">Pagination</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="component-progress.html">Progress</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="component-spinner.html">Spinner</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="component-tooltip.html">Tooltip</a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li class="sidebar-item  has-sub">
-                            <a href="#" class='sidebar-link'>
-                                <i class="bi bi-collection-fill"></i>
-                                <span>Extra Components</span>
-                            </a>
-                            <ul class="submenu ">
-                                <li class="submenu-item ">
-                                    <a href="extra-component-avatar.html">Avatar</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="extra-component-sweetalert.html">Sweet Alert</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="extra-component-toastify.html">Toastify</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="extra-component-rating.html">Rating</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="extra-component-divider.html">Divider</a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li class="sidebar-item  has-sub">
-                            <a href="#" class='sidebar-link'>
-                                <i class="bi bi-grid-1x2-fill"></i>
-                                <span>Layouts</span>
-                            </a>
-                            <ul class="submenu ">
-                                <li class="submenu-item ">
-                                    <a href="layout-default.html">Default Layout</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="layout-vertical-1-column.html">1 Column</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="layout-vertical-navbar.html">Vertical with Navbar</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="layout-horizontal.html">Horizontal Menu</a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li class="sidebar-title">Forms &amp; Tables</li>
-
-                        <li class="sidebar-item  has-sub">
-                            <a href="#" class='sidebar-link'>
-                                <i class="bi bi-hexagon-fill"></i>
-                                <span>Form Elements</span>
-                            </a>
-                            <ul class="submenu ">
-                                <li class="submenu-item ">
-                                    <a href="form-element-input.html">Input</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="form-element-input-group.html">Input Group</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="form-element-select.html">Select</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="form-element-radio.html">Radio</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="form-element-checkbox.html">Checkbox</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="form-element-textarea.html">Textarea</a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li class="sidebar-item  ">
-                            <a href="form-layout.html" class='sidebar-link'>
-                                <i class="bi bi-file-earmark-medical-fill"></i>
-                                <span>Form Layout</span>
-                            </a>
-                        </li>
-
-                        <li class="sidebar-item  has-sub">
-                            <a href="#" class='sidebar-link'>
-                                <i class="bi bi-pen-fill"></i>
-                                <span>Form Editor</span>
-                            </a>
-                            <ul class="submenu ">
-                                <li class="submenu-item ">
-                                    <a href="form-editor-quill.html">Quill</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="form-editor-ckeditor.html">CKEditor</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="form-editor-summernote.html">Summernote</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="form-editor-tinymce.html">TinyMCE</a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li class="sidebar-item  ">
-                            <a href="table.html" class='sidebar-link'>
-                                <i class="bi bi-grid-1x2-fill"></i>
-                                <span>Table</span>
-                            </a>
-                        </li>
-
-                        <li class="sidebar-item  ">
-                            <a href="table-datatable.html" class='sidebar-link'>
-                                <i class="bi bi-file-earmark-spreadsheet-fill"></i>
-                                <span>Datatable</span>
-                            </a>
-                        </li>
-
-                        <li class="sidebar-title">Extra UI</li>
-
-                        <li class="sidebar-item  has-sub">
-                            <a href="#" class='sidebar-link'>
-                                <i class="bi bi-pentagon-fill"></i>
-                                <span>Widgets</span>
-                            </a>
-                            <ul class="submenu ">
-                                <li class="submenu-item ">
-                                    <a href="ui-widgets-chatbox.html">Chatbox</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="ui-widgets-pricing.html">Pricing</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="ui-widgets-todolist.html">To-do List</a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li class="sidebar-item  has-sub">
-                            <a href="#" class='sidebar-link'>
-                                <i class="bi bi-egg-fill"></i>
-                                <span>Icons</span>
-                            </a>
-                            <ul class="submenu ">
-                                <li class="submenu-item ">
-                                    <a href="ui-icons-bootstrap-icons.html">Bootstrap Icons </a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="ui-icons-fontawesome.html">Fontawesome</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="ui-icons-dripicons.html">Dripicons</a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li class="sidebar-item  has-sub">
-                            <a href="#" class='sidebar-link'>
-                                <i class="bi bi-bar-chart-fill"></i>
-                                <span>Charts</span>
-                            </a>
-                            <ul class="submenu ">
-                                <li class="submenu-item ">
-                                    <a href="ui-chart-chartjs.html">ChartJS</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="ui-chart-apexcharts.html">Apexcharts</a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li class="sidebar-item  ">
-                            <a href="ui-file-uploader.html" class='sidebar-link'>
-                                <i class="bi bi-cloud-arrow-up-fill"></i>
-                                <span>File Uploader</span>
-                            </a>
-                        </li>
-
-                        <li class="sidebar-item  has-sub">
-                            <a href="#" class='sidebar-link'>
-                                <i class="bi bi-map-fill"></i>
-                                <span>Maps</span>
-                            </a>
-                            <ul class="submenu ">
-                                <li class="submenu-item ">
-                                    <a href="ui-map-google-map.html">Google Map</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="ui-map-jsvectormap.html">JS Vector Map</a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li class="sidebar-title">Pages</li>
-
-                        <li class="sidebar-item  ">
-                            <a href="application-email.html" class='sidebar-link'>
-                                <i class="bi bi-envelope-fill"></i>
-                                <span>Email Application</span>
-                            </a>
-                        </li>
-
-                        <li class="sidebar-item  ">
-                            <a href="application-chat.html" class='sidebar-link'>
-                                <i class="bi bi-chat-dots-fill"></i>
-                                <span>Chat Application</span>
-                            </a>
-                        </li>
-
-                        <li class="sidebar-item  ">
-                            <a href="application-gallery.html" class='sidebar-link'>
-                                <i class="bi bi-image-fill"></i>
-                                <span>Photo Gallery</span>
-                            </a>
-                        </li>
-
-                        <li class="sidebar-item  ">
-                            <a href="application-checkout.html" class='sidebar-link'>
-                                <i class="bi bi-basket-fill"></i>
-                                <span>Checkout Page</span>
-                            </a>
-                        </li>
-
-                        <li class="sidebar-item  has-sub">
-                            <a href="#" class='sidebar-link'>
-                                <i class="bi bi-person-badge-fill"></i>
-                                <span>Authentication</span>
-                            </a>
-                            <ul class="submenu ">
-                                <li class="submenu-item ">
-                                    <a href="auth-login.html">Login</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="auth-register.html">Register</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="auth-forgot-password.html">Forgot Password</a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li class="sidebar-title">Raise Support</li>
-
-                        <li class="sidebar-item  ">
-                            <a href="https://zuramai.github.io/mazer/docs" class='sidebar-link'>
-                                <i class="bi bi-life-preserver"></i>
-                                <span>Documentation</span>
-                            </a>
-                        </li>
-
-                        <li class="sidebar-item  ">
-                            <a href="https://github.com/zuramai/mazer/blob/main/CONTRIBUTING.md" class='sidebar-link'>
-                                <i class="bi bi-puzzle"></i>
-                                <span>Contribute</span>
-                            </a>
-                        </li>
-
-                        <li class="sidebar-item  ">
-                            <a href="https://github.com/zuramai/mazer#donate" class='sidebar-link'>
-                                <i class="bi bi-cash"></i>
-                                <span>Donate</span>
-                            </a>
-                        </li> --}} -->
-
-                    </ul>
-
-                </div>
-                <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
             </div>
-        </div>
-
-        <div id="main" class='layout-navbar'>
-            <header class='mb-3'>
-                <nav class="navbar navbar-expand navbar-light " style="background-color: #cce6ff">
-                    <div class="container-fluid">
-                        <a href="#" class="burger-btn d-block">
-                            <i class="bi bi-justify fs-3"></i>
+            <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end"
+                style="background-color:#0d3f50">
+                <ul class="navbar-nav navbar-nav-right">
+                    <li class="nav-item dropdown me-1">
+                        <a class="nav-link count-indicator dropdown-toggle d-flex justify-content-center align-items-center"
+                            id="messageDropdown" href="#" data-bs-toggle="dropdown">
+                            <i class="mdi mdi-message-text mx-0 text-light"></i>
+                            <span class="count"></span>
                         </a>
-                        <!-- {{-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button> --}} -->
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                                <!-- {{-- <li class="nav-item dropdown me-1">
-                                    <a class="nav-link active dropdown-toggle" href="#" data-bs-toggle="dropdown"
-                                        aria-expanded="false">
-                                        <i class='bi bi-envelope bi-sub fs-4 text-gray-600'></i>
-                                    </a>
-                                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
-                                        <li>
-                                            <h6 class="dropdown-header">Mail</h6>
-                                        </li>
-                                        <li><a class="dropdown-item" href="#">No new mail</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item dropdown me-3">
-                                    <a class="nav-link active dropdown-toggle" href="#" data-bs-toggle="dropdown"
-                                        aria-expanded="false">
-                                        <i class='bi bi-bell bi-sub fs-4 text-gray-600'></i>
-                                    </a>
-                                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
-                                        <li>
-                                            <h6 class="dropdown-header">Notifications</h6>
-                                        </li>
-                                        <li><a class="dropdown-item">No notification available</a></li>
-                                    </ul>
-                                </li> --}} -->
-                            </ul>
-                            <div class="dropdown">
-                                <a href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <div class="user-menu d-flex">
-                                        <div class="user-name text-end me-3">
-                                            <h6 class="mb-0 text-gray-600">Muhammad Bilal</h6>
-                                            <p class="mb-0 text-sm text-gray-600">Admin Panel</p>
-                                        </div>
-                                        <div class="user-img d-flex align-items-center">
-                                            <div class="avatar avatar-md">
-                                                <img src="assets/images/faces/1.jpg">
-                                            </div>
-                                        </div>
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown"
+                            aria-labelledby="messageDropdown">
+                            <p class="mb-0 font-weight-normal float-left dropdown-header"><a href="<?=base_url()?>Contacts">Messages</a></p>
+                            <?php
+                                $contactdata=$this->db->query('select * from contacts ORDER BY id DESC LIMIT 3')->result();
+                                foreach ($contactdata as $value) {
+                                    echo '
+                                <a class="dropdown-item">
+                                    <div class="item-thumbnail">
+                                        <img src="assets/images/user-logo.png" alt="image" class="profile-pic">
+                                    </div>
+                                    <div class="item-content flex-grow">
+                                            <h6 class="ellipsis font-weight-normal">'.$value->cemail.'</h6>
+                                            <p class="font-weight-light small-text text-muted mb-0">'.$value->cmessage .'</p>
                                     </div>
                                 </a>
-                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
-                                    <li>
-                                        <h6 class="dropdown-header">Hello, Admin!</h6>
-                                    </li>
-                                    <li><a class="dropdown-item" href="#"><i class="icon-mid bi bi-person me-2"></i> My
-                                            Profile</a></li>
-                                    <li><a class="dropdown-item" href="#"><i class="icon-mid bi bi-gear me-2"></i>
-                                            Settings</a></li>
-                                    <li><a class="dropdown-item" href="#"><i class="icon-mid bi bi-wallet me-2"></i>
-                                            Wallet</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="<?=base_url()?>Login"><i
-                                                class="icon-mid bi bi-box-arrow-left me-2"></i> Logout</a></li>
-                                </ul>
-                            </div>
+                                ';}?>
                         </div>
-                    </div>
-                </nav>
-            </header>
+                    </li>
+                    <li class="nav-item dropdown me-4">
+                        <a class="nav-link count-indicator dropdown-toggle d-flex align-items-center justify-content-center notification-dropdown"
+                            id="notificationDropdown" href="#" data-bs-toggle="dropdown">
+                            <i class="mdi mdi-bell mx-0 text-light"></i>
+                            <span class="count"></span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown"
+                            aria-labelledby="notificationDropdown">
+                            <p class="mb-0 font-weight-normal float-left dropdown-header">Notifications</p>
+                            <a class="dropdown-item">
+                                <div class="item-thumbnail">
+                                    <div class="item-icon bg-success">
+                                        <i class="mdi mdi-information mx-0"></i>
+                                    </div>
+                                </div>
+                                <div class="item-content">
+                                    <h6 class="font-weight-normal">Application Error</h6>
+                                    <p class="font-weight-light small-text mb-0 text-muted">
+                                        Just now
+                                    </p>
+                                </div>
+                            </a>
+                            <a class="dropdown-item">
+                                <div class="item-thumbnail">
+                                    <div class="item-icon bg-warning">
+                                        <i class="mdi mdi-settings mx-0"></i>
+                                    </div>
+                                </div>
+                                <div class="item-content">
+                                    <h6 class="font-weight-normal">Settings</h6>
+                                    <p class="font-weight-light small-text mb-0 text-muted">
+                                        Private message
+                                    </p>
+                                </div>
+                            </a>
+                            <a class="dropdown-item">
+                                <div class="item-thumbnail">
+                                    <div class="item-icon bg-info">
+                                        <i class="mdi mdi-account-box mx-0"></i>
+                                    </div>
+                                </div>
+                                <div class="item-content">
+                                    <h6 class="font-weight-normal">New user registration</h6>
+                                    <p class="font-weight-light small-text mb-0 text-muted">
+                                        2 days ago
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item nav-profile dropdown">
+                        <a class="nav-link " href="#" data-bs-toggle="dropdown" id="profileDropdown">
+                            <img src="<?= base_url() ?>assets/images/user-logo.png" alt="profile" />
+                            <span class="nav-profile-name"></span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown"
+                            aria-labelledby="profileDropdown">
+                            <h6 class="text-center py-3 text-capitalize" style="background-color:#e8e9eb;
+                            font-weight:bolder;font-family: serif; color: #0d3f50">Muhammad Bilal</h6>
+                            <a class="dropdown-item" style="margin-top:-10px" href="Profile">
+                                <i class="mdi mdi-account-circle text-primary"></i>
+                                Profile
+                            </a>
+                            <a class="dropdown-item" href="Customize">
+                                <i class="mdi mdi-settings text-success"></i>
+                                Customize
+                            </a>
+                            <a class="dropdown-item" href="Login">
+                                <i class="mdi mdi-logout text-danger"></i>
+                                Logout
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+                <button style="color:white" class="navbar-toggler navbar-toggler-right d-lg-none align-self-center"
+                    type="button" data-toggle="offcanvas">
+                    <span class="mdi mdi-menu"></span>
+                </button>
+            </div>
+        </nav>
+        <div class="container-fluid page-body-wrapper">
+            <nav class="sidebar sidebar-offcanvas" id="sidebar">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?= base_url() ?>Dashboard">
+                            <i class="mdi mdi-home menu-icon" style="color:#0d3f50"></i>
+                            <span class="menu-title">Dashboard</span>
+                        </a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false"
+                            aria-controls="ui-basic">
+                            <i class="mdi mdi-circle-outline menu-icon"></i>
+                            <span class="menu-title">UI Elements</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                        <div class="collapse" id="ui-basic">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item"> <a class="nav-link" href="buttons.html">Buttons</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="typography.html">Typography</a></li>
+                            </ul>
+                        </div>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?= base_url() ?>Requests">
+                            <i class="mdi mdi-buffer menu-icon" style="color:#0080FF"></i>
+                            <span class="menu-title">Requests</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?= base_url() ?>Contacts">
+                            <i class="mdi mdi-wechat menu-icon" style="color:green"></i>
+                            <span class="menu-title">Contacts</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?=base_url()?>Projects">
+                            <i class="mdi mdi-credit-card-multiple menu-icon" style="color:red"></i>
+                            <span class="menu-title">Projects</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://bilaeldevelops.hashnode.dev/">
+                            <i class="mdi mdi-tumblr-reblog menu-icon" style="color:#8000FF"></i>
+                            <span class="menu-title">Blogs</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">
+                            <i class="mdi mdi-chart-areaspline menu-icon" style="color:#4D8FAC"></i>
+                            <span class="menu-title">Sales Expertise</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?=base_url()?>articles">
+                            <i class="mdi mdi-cards menu-icon" style="color:black"></i>
+                            <span class="menu-title">Researches</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?= base_url() ?>Users">
+                            <i class="mdi mdi-newspaper menu-icon" style="color:#9F2B68"></i>
+                            <span class="menu-title">Social Posts</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?= base_url() ?>Users">
+                            <i class="mdi mdi-account-multiple-outline menu-icon" style="color:#FB9902"></i>
+                            <span class="menu-title">Backend Users</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+            <script>
+            $('body').append('<div style="" id="loadingDiv"><div class="loaderoff"></div></div>');
+            $(window).on('load', function() {
+                setTimeout(removeLoader, 500); //wait for page load PLUS two seconds.
+            });
+
+            function removeLoader() {
+                $("#loadingDiv").fadeOut(1000, function() {
+                    // fadeOut complete. Remove the loading div
+                    $("#loadingDiv").remove(); //makes page more lightweight 
+                });
+            }
+            </script>
+            </script>

@@ -3,24 +3,41 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Login extends CI_Controller {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
 	public function index()
 	{
-		// $data['contactsdata'] = $this->db->get('contacts')->result();
+		session_destroy();
+		$this->load->view('login');
+	}
+	public function check()
+	{
+		$this->load->library('session');
+		$email=$this->input->post('email');
+		$password=$this->input->post('password');
+		$data=$this->db->query('select * from users where email="'.$email.'" and password ="'.$password.'"');
+		if($data->num_rows())
+		{
+			
+			$data=$this->db->query('select * from users where email="'.$email.'" and password ="'.$password.'"')->result()[0];
+			$this->session->set_userdata('email', $email);
+			// get the email data. if email is users then 
+			$this->session->set_userdata('usertype', $data->usertype);
+			echo('Correct');
+		}
+		else
+		{
+			$data=$this->db->query('select * from users where email="'.$email.'"');
+			if($data->num_rows())
+			{
+				echo('Email');				
+			}
+			else
+			{
+				echo('Wrong');
+			}	
+		}
+	}
+	function logout(){
+		session_destroy();
 		$this->load->view('login.php');
 	}
 }

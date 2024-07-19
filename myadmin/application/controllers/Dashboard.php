@@ -3,23 +3,41 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Dashboard extends CI_Controller {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
 	public function index()
 	{
-		$this->load->view('dashboard.php');
+		$email = $this->session->email;
+				if($email ==""){
+				$this->load->view('login.php');
+		}else{
+			// $data['hiredrequests']=$this->db->get('hired');
+			$data['contactsdata']=$this->db->get('contacts');
+			$data['notepaddata']=$this->db->get('notepad')->result();
+			$this->load->view('dashboard',$data);
+		}
+	
 	}
-}
+	public function notepadinsert()
+	{
+		$text_np = $this->input->post('text_np');
+		$data = [
+			'text_np'=>$text_np,
+		];
+		$result = $this->db->insert('notepad', $data);
+		if ($result) {
+			echo ("Correct");
+		} else {
+			echo ("Uncorrect");
+		}
+	}
+	public function deletenotepad()
+	{
+		$id = $this->input->post('id');
+		$this->db->where('id_np', $id);
+		$result = $this->db->delete('notepad');
+		if ($result) {
+			echo ("Correct");
+		} else {
+			echo ("Uncorrect");
+		}
+	}
+	}

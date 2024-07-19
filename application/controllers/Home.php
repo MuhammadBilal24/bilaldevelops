@@ -24,16 +24,29 @@ class Home extends CI_Controller {
 	}
 	public function insertcontact()
 	{
-		$email_contact = $this->input->post('email_contact');
-		$subject_contact = $this->input->post('subject_contact');
-		$message_contact = $this->input->post('message_contact');
+		$cemail = $this->input->post('cemail');
+		$csubject = $this->input->post('csubject');
+		$cmessage = $this->input->post('cmessage');
 		$data = [
-			'email_contact' => $email_contact,
-			'subject_contact' => $subject_contact,
-			'message_contact' => $message_contact,
+			'cemail' => $cemail,
+			'csubject' => $csubject,
+			'cmessage' => $cmessage,
 
 		];
 		$result = $this->db->insert('contacts', $data);
+		if ($result) {
+			echo ("Correct");
+		} else {
+			echo ("Uncorrect");
+		}
+	}
+	public function insertmodalview()
+	{
+		$watch = $this->input->post('watch');
+		$data = [
+			'watch' => $watch,
+		];
+		$result = $this->db->insert('views', $data);
 		if ($result) {
 			echo ("Correct");
 		} else {

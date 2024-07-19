@@ -2,69 +2,146 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Admin Bilael Develops</title>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
-    <link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.css">
-    <link rel="stylesheet" href="assets/css/app.css">
-    <link rel="stylesheet" href="assets/css/pages/auth.css">
-    <link rel="shortcut icon" href="assets/images/favcon2.png" type="image/x-icon">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Login - AdminSupports Bilal Develops </title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="assets/vendors/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="assets/vendors/base/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- plugin css for this page -->
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="assets/images/favicon.png" />
 </head>
 
 <body>
-    <div id="auth">
-        <div class="row h-100">
-            <div class="col-lg-12 col-12">
-                      
-            <div id="auth-left" style="float:right">
-            <!-- <div class="auth-logo" >
-                    </div> -->
-                    <!-- <h1 class="" style="text-align: center">Log In.</h1> -->
-                    <a href="index.html"><img style="margin-bottom:30px;  width:250px "  src="assets/images/logo22.png" alt="Logo"></a>
-                    
-                    <!-- <h5 class="">Admin Panel - Bilael Develops</h5> -->
-                    
-
-                    <form action="" method="post">
-                        <div class="form-group position-relative has-icon-left mb-4">
-                            <input type="text" class="form-control form-control-xl" id="email" name="email" placeholder="Email Username">
-                            <div class="form-control-icon">
-                                <i class="bi bi-person"></i>
-                            </div>
-                        </div>
-                        <div class="form-group position-relative has-icon-left mb-4">
-                            <input type="password" class="form-control form-control-xl"
-                            name="password" id="password" placeholder="Password">
-                            <div class="form-control-icon">
-                                <i class="bi bi-shield-lock"></i>
-                            </div>
-                        </div>
-                        <div class="form-check form-check-lg d-flex align-items-end">
-                            <input class="form-check-input me-2" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label text-gray-600" for="flexCheckDefault">
-                                Keep me logged in
-                            </label>
-                        </div>
-                        <button type="submit" style="background-color:#ff7a57;" class=" btn-block btn-lg  mt-5">Log in</button>
-                    </form>
-                    <!-- <div class="text-center mt-5 text-lg fs-4">
-                        <p class="text-gray-600">Don't have an account? <a href="auth-register.html"
-                                class="font-bold">Sign
-                                up</a>.</p>
-                        {{-- <p><a class="font-bold" href="auth-forgot-password.html">Forgot password?</a>.</p> --}}
-                    </div> -->
+  <div class="container-scroller">
+    <div class="container-fluid page-body-wrapper full-page-wrapper">
+      <div class="content-wrapper d-flex align-items-center auth px-0">
+        <div class="row w-100 mx-0">
+          <div class="col-lg-4 mx-auto">
+            <div class="auth-form-light text-left py-4 px-4 px-sm-5">
+              <div class="brand-logo d-flex d-grid justify-content-center">
+                <img src="assets/images/logo22.png" alt="logo" style="height:35px">
+              </div>
+              <h4>Welcome</h4>
+              <h6 class="font-weight-light">Sign in to continue.</h6>
+              <form class="pt-4" method="POST" id="formcheck" action="#" class="needs-validation" novalidate="">
+                <div class="form-group">
+                  <label for="" class="text-muted">Email / Username</label>
+                  <input id="email" name="email" type="email" class="form-control form-control-lg" id="exampleInputEmail1"
+                  style="border:2px solid #0d3f50" >
                 </div>
-            </div>
-            <!-- {{-- <div class="col-lg-7 d-none d-lg-block">
-                <div id="auth-right">
-                    
+                <div class="form-group">
+                  <label for="" class="text-muted">Password</label>
+                  <input type="password" class="form-control form-control-lg" id="password" name="password"
+                  style="border:2px solid #0d3f50">
                 </div>
-            </div> --}} -->
+                <div class="mt-3 d-flex d-grid justify-content-center">
+                <button type="button"  id="loginbtn" class="btn btn-success btn-lg btn-block" tabindex="4"
+                  style="box-shadow:none;">
+                    LOGIN
+                    </button>
+                </div>
+              </form>
+            </div>`
+          </div>
         </div>
-
+      </div>
+      <!-- content-wrapper ends -->
     </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+  <!-- plugins:js -->
+  <script src="assets/vendors/base/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- inject:js -->
+  <script src="assets/js/off-canvas.js"></script>
+  <script src="assets/js/hoverable-collapse.js"></script>
+  <script src="assets/js/template.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="assets/js/sweetalert.js"></script>
+   
+  <!-- endinject -->
+  <script>
+  // check functions
+  $('#loginbtn').on('click',function(){
+    var email=$('#email').val();
+    var password=$('#password').val();
+    //var form=$('#formcheck').serialize();
+    if(email=="")
+    {
+      swal({
+        icon:"error",
+        title:"Enter Email / Username",
+        timer:1500
+      })
+    }
+    else if (password=="")
+    {
+      swal({
+        icon:"error",
+        title:"Enter Password",
+        timer:1500
+      })
+    }
+    else{
+      $.ajax({
+      type:'post',
+      url:'Login/check',
+      data:{email:email, password:password},
+      success:(function(data)
+      {
+        if(data=="Correct")
+        {
+          swal({
+          icon:"success",
+          title:"Login Success",
+          text:"Welcome to Bilal Develop's Admin Support",
+          timer:1700
+          }).then(()=>{
+            window.location='Dashboard';
+          })
+        }
+        else if(data=="Email")
+        {
+          swal({
+            icon:"error",
+            title:" Try Again",
+            text:'Email is Correct, Password is invalid',
+            showConfirmButton: true,
+          })
+        }
+        else if(data=="Wrong")
+        {
+          swal({
+            icon:"error",
+            title:" Opps",
+            text:'Email & Password is Invalid, SignUp Now',
+            showConfirmButton: true,
+          })
+        }
+        else
+        {
+          swal({
+            icon:"error",
+            title:" Try Again",
+            showConfirmButton: true,
+          })
+        }
+        
+      })
+    })
+    }
+    
+
+  })
+</script>
 </body>
 
 </html>

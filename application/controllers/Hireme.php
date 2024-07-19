@@ -24,15 +24,15 @@ class Hireme extends CI_Controller {
 	}
 	public function insert()
 	{
-		$fname = $this->input->post('fname');
-		$email = $this->input->post('email');
-		$subject = $this->input->post('subject');
-		$about = $this->input->post('about');
+		$hname = $this->input->post('hname');
+		$hemail = $this->input->post('hemail');
+		$hsubject = $this->input->post('hsubject');
+		$habout = $this->input->post('habout');
 		$data = [
-			'fname'=>$fname,
-			'email' => $email,
-			'subject' => $subject,
-			'about' => $about,
+			'hname'=>$hname,
+			'hemail' => $hemail,
+			'hsubject' => $hsubject,
+			'habout' => $habout,
 
 		];
 		$result = $this->db->insert('hired', $data);

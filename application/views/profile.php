@@ -54,7 +54,7 @@
                         <a class="nav-link" href="Home ">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn btn-primary rounded ml-4" href="Hireme">Hire Me</a>
+                        <a class="btn btn-primary rounded ml-4" href="<?= base_url() ?>Hireme">Hire Me</a>
                     </li>
                     <br>
                 </ul>
@@ -272,7 +272,7 @@
                             <div class="row align-items-center">
                                 <div class="col-md-3">
                                     <div class="text-center border-end">
-                                        <img src="assets/imgs/director.webp"
+                                        <img src="<?= base_url() ?>assets/imgs/director.webp"
                                             class="img-fluid avatar-xxl rounded-circle" alt="">
                                         <h6 class="text-primary mt-3 mb-2">Muhammad Bilal</h6>
                                         <h6 class="text-muted mb-3">Web Developer & Designer</h6>
@@ -281,7 +281,7 @@
                                 <div class="col-md-9">
                                     <div class="ms-3">
                                         <div>
-                                            <!-- <h5 class="card-title mb-2">Biography</h5> -->
+                                            <h5 class="card-title mb-2">Biography</h5>
                                             <p class="mb-0 text-muted">Hi I'm Bilal, As a Professional Full-Stack
                                                 Developer and Designer.
                                             </p>

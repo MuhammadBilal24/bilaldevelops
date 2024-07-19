@@ -1,14 +1,8 @@
 <?php include 'header.php'; ?>
 <!-- Page Header  #0d3f50 main,  -->
 
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P997LCML" height="0" width="0"
-        style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
 <header class="header" id="home">
-    <!--style=background-color:#0d3f50;"-->
-    <!-- -->
+    <!--style="background-color:#0d3f50;"-->
     <div class="container">
         <div class="infos" style="margin-top:-40px">
             <!-- <p style="color:black">Are you looking for a <strong style="color:black; text-decoration-line: underline; text-decoration-style: double;
@@ -94,10 +88,11 @@
 </section>
 
 <!-- Service section -->
-<section id="service" class="section" style="margin-top:-100px">
+<section id="service" class="section" style="margin-top:-80px">
     <div class="container text-center">
         <h6 class="subtitle">Services</h6>
-        <h6 class="section-title mb-4" style="color:black; font-weight:bolder;font-family: Garamond, serif;">
+        <h6 class="section-title mb-4"
+            style="color:black; text-decoration: underline #0d3f50; font-weight:bolder;font-family: Garamond, serif;">
             What I Do</h6>
         <!--<p class="mb-5 pb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In alias dignissimos. <br> rerum commodi corrupti, temporibus non quam.</p>-->
 
@@ -147,80 +142,66 @@
 </section>
 <!-- End of Sectoin -->
 
+
 <!-- Skills section -->
-<section class="section" style="margin-top:-80px">
+<section class="section" style="margin-top:-80px;">
     <div class="container text-center">
         <h6 class="subtitle">Skills</h6>
-        <h6 class="section-title mb-4" style="color:black;  font-weight:bolder;font-family: Garamond, serif;">
-            Why Choose Me</h6>
-        <p class="">Diverse skills tailored to meet your project needs, ensuring excellence at every step.</p>
-        <!--<img style="width:350px; height:100%" src="assets/imgs/logoC2.png" alt="">-->
-        <div class="img-holder d-flex justify-content-center">
-            <img style="margin-top:20px; height:80%; width:80%;" src="assets/imgs/a1new.gif" alt="Skills Carosel">
-        </div>
-        <div style="margin-top:50px;">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" title="PHP" alt="PHP"
-                width="45" height="45" style="margin-top:5px;" />&nbsp;
-            <img src="assets/imgs/laravel.svg" title="Laravel" alt="Laravel" width="45" height="45"
-                style="margin-top:5px;" />&nbsp;
-            <img src="assets/imgs/ci.svg" title="Laravel" alt="Laravel" width="45" height="45"
-                style="margin-top:5px;" />&nbsp;
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" title="Vuejs"
-                alt="Vuejs" width="45" height="45" style="margin-top:5px;" />&nbsp;
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original-wordmark.svg"
-                title="Docker" alt="Docker" width="45" height="45" style="margin-top:5px;" />&nbsp;
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original-wordmark.svg" title="Git"
-                alt="Git" width="45" height="45" style="margin-top:5px;" />&nbsp;
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nuxtjs/nuxtjs-original.svg" title="Nuxtjs"
-                alt="Nuxtjs" width="45" height="45" style="margin-top:5px;" />&nbsp;
-            <img src="assets/imgs/react.png" title="React" alt="React" width="45" height="45"
-                style="margin-top:5px;" />&nbsp;
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" title="Python"
-                alt="Python " width="45" height="45" style="margin-top:5px;" />&nbsp;
-            <img src="assets/imgs/html.png" title="HTML5" alt="HTML" width="45" height="45"
-                style="margin-top:5px;" />&nbsp;
-            <img src="assets/imgs/css.png" title="CSS3" alt="CSS" width="45" height="45"
-                style="margin-top:7px;" />&nbsp;
-            <img src="assets/imgs/js.png" title="JavaScript" alt="JavaScript" width="45" height="45"
-                style="margin-top:7px;" />&nbsp;
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" title="Redis"
-                alt="Redis" width="45" height="45" style="margin-top:7px;" />&nbsp;
-            <img src="assets/imgs/sql.png" title="Mysql" alt="Mysql" width="45" height="45"
-                style="margin-top:7px;" />&nbsp;
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
-                title="Bootstrap" alt="Bootstrap" width="45" height="45" style="margin-top:7px;" />&nbsp;
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/composer/composer-original.svg"
-                title="Composer" alt="Composer" width="45" height="45" style="margin-top:7px;" />&nbsp;
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" title="Git"
-                alt="Git" width="45" height="45" style="margin-top:7px;" />&nbsp;
-        </div>
+        <h6 class="section-title mb-4"
+            style="color:black;  text-decoration: underline #0d3f50; font-weight:bolder;font-family: Garamond, serif;">
+            Why Choose me</h6>
+        <p class="">I am always open to feedback and strive to make sure my clients are happy with the final
+            product. I understand the importance of clear communication and transparency throughout the development
+            process, and I make sure to keep my clients informed and involved at every stage.</p>
+        <img style="width:350px; height:100%" src="assets/imgs/logoC2.webp" alt="">
+        <!-- <section class="customer-logos slider py-2">
+            <div class="slide"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg">
+            </div>
+            <div class="slide"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg">
+            </div>
+            <div class="slide"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg">
+            </div>
+            <div class="slide"><img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original-wordmark.svg"></div>
+            <div class="slide"><img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original-wordmark.svg"></div>
+            <div class="slide"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nuxtjs/nuxtjs-original.svg">
+            </div>
+
+            <div class="slide"><img src="assets/imgs/react.png"></div>
+            <div class="slide"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg">
+            </div>
+            <div class="slide"><img src="assets/imgs/html.png"></div>
+            <div class="slide"><img src="assets/imgs/css.png"></div>
+            <div class="slide"><img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"></div>
+            <div class="slide"><img src="assets/imgs/js.png"></div>
+            <div class="slide"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg">
+            </div>
+            <div class="slide"><img src="assets/imgs/sql.png"></div>
+            <div class="slide"><img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/composer/composer-original.svg"></div>
+            <div class="slide"><img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg"></div>
+
+        </section> -->
+
     </div>
 </section>
 <!-- End of Skills sections -->
 
-<!-- Process section -->
-<section class="section" style="margin-top:-80px">
-    <div class="container text-center">
-        <h6 class="subtitle">Process</h6>
-        <h6 class="section-title mb-4" style="color:black;  font-weight:bolder;font-family: Garamond, serif;">
-            Development Path</h6>
-        <p class="">Embark on a journey of website development, where ideas transform into digital reality through
-            meticulous planning and precise execution.</p>
-        <div class="img-holder d-flex justify-content-center">
-            <img style="margin-top:20px; height:90%; width:100%;" src="assets/imgs/process.gif" alt="Process Carosel">
-        </div>
-    </div>
-</section>
-<!-- End of Process sections -->
 
 <!-- Portfolio section -->
-<section id="portfolio" class="section" style="margin-top:-100px">
+<section id="portfolio" class="section" style="margin-top:-80px">
     <div class="container text-center">
         <h6 class="subtitle">Portfolio</h6>
-        <h6 class="section-title mb-4" style="color:black;  font-weight:bolder;font-family: Garamond, serif;">
+        <h6 class="section-title mb-4"
+            style="color:black;  text-decoration: underline #0d3f50; font-weight:bolder;font-family: Garamond, serif;">
             Check My Works</h6>
-        <p class="mb-5 pb-4">I'm your go-to Energetic Developer, bringing positivity and passion to every project.
-            Committed to delivering top-notch results and building strong client relationships with a smile!.</p>
+        <p class="mb-5 pb-4">As an Energetic Developer, I bring a positive and proactive attitude to every project I
+            work on. I am passionate about my work and committed to delivering high-quality results that meet or exceed
+            my clients' expectations. I believe in building strong relationships with my clients and working closely
+            with them to understand their needs, goals, and objectives.</p>
 
         <div class="row">
             <div class="col-sm-4">
@@ -290,16 +271,69 @@
                 </div>
             </div>
         </div>
-        <!-- <a href="allprojects"><button class="btn btn-primary w-lg rounded ml-4">More </button></a> -->
+        <a href="allprojects"><button class="btn btn-primary w-lg rounded ml-4">More </button></a>
     </div>
 </section>
 <!-- End of portfolio section -->
 
+<!--Testmonial Section -->
+<!-- <section id="testmonial" class="section">-->
+<!--   <div class="container text-center">-->
+<!--       <h6 class="subtitle">Testmonial</h6>-->
+<!--       <h6 class="section-title mb-4" style="color:black">What People Say About Me</h6>-->
+<!--<p class="mb-5 pb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In alias dignissimos. <br> rerum commodi corrupti, temporibus non quam.</p>-->
+
+
+<!--       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">-->
+<!--           <ol class="carousel-indicators">-->
+<!--               <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>-->
+<!--               <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>-->
+<!--               <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>-->
+<!--           </ol>-->
+<!--           <div class="carousel-inner">-->
+<!--               <div class="carousel-item active">-->
+<!--                   <div class="card testmonial-card border">-->
+<!--                       <div class="card-body">-->
+<!--                           <img src="assets/imgs/avatar-2.jpg" alt="">-->
+<!--                           <p>Amazing working style</p>-->
+<!--                           <h1 class="title">Muhammad Hasnain</h1>-->
+<!--                           <h1 class="subtitle">Full-Stack Developer | CEO Nenosofts IT Solution</h1>-->
+<!--                       </div>-->
+<!--                   </div>-->
+<!--               </div>-->
+<!--               <div class="carousel-item">-->
+<!--                   <div class="card testmonial-card border">-->
+<!--                       <div class="card-body">-->
+<!--                           <img src="assets/imgs/avatar-1.jpg" alt="">-->
+<!--                           <p>His designing is exactly pure and clean. GOOD JOB</p>-->
+<!--                           <h1 class="title">Rameeza Ali</h1>-->
+<!--                           <h1 class="subtitle">Android Designer</h1>-->
+<!--                       </div>-->
+<!--                   </div>-->
+<!--               </div>-->
+<!--               <div class="carousel-item">-->
+<!--                   <div class="card testmonial-card border">-->
+<!--                       <div class="card-body">-->
+<!--                           <img src="assets/imgs/avatar-3.jpg" alt="">-->
+<!--                           <p>Hard Worker, Profeesional Developer</p>-->
+<!--                           <h1 class="title">Wajid Ali</h1>-->
+<!--                           <h1 class="subtitle">Web Developer</h1>-->
+<!--                       </div>-->
+<!--                   </div>-->
+<!--               </div>-->
+<!--           </div>-->
+<!--       </div>-->
+<!--   </div>-->
+<!--</section> -->
+<!-- End of testmonial section -->
+
 <!--Blog Section -->
+
 <section id="testmonial" class="section" style="margin-top:-80px">
     <div class="container text-center">
         <h6 class="subtitle">Packages</h6>
-        <h6 class="section-title mb-4" style="color:black;  font-weight:bolder;font-family: Garamond, serif;">
+        <h6 class="section-title mb-4"
+            style="color:black;  text-decoration: underline #0d3f50; font-weight:bolder;font-family: Garamond, serif;">
             Sales Expertise</h6>
         <p class="mb-5 pb-4">Unlock the potential of your projects with my expertise. <br>Check my selling Skills</p>
 
@@ -360,13 +394,11 @@
 <section id="papers" class="section" style="margin-top:-100px;">
     <div class="container text-center">
         <h6 class="subtitle">Research</h6>
-        <h6 class="section-title mb-4" style="color:black;  font-weight:bolder;font-family: Garamond, serif;">
+        <h6 class="section-title mb-4"
+            style="color:black;  text-decoration: underline #0d3f50; font-weight:bolder;font-family: Garamond, serif;">
             General Articles</h6>
         <!-- <p class="mb-5 pb-4">Artificial Intelligence</p> -->
         <h4 style="color:#9D0000;font-weight:bolder;font-family: Garamond, serif;">Uploading Soon</h4>
-        <div class="img-holder d-flex justify-content-center">
-            <img style="margin-top:20px; height:80%; width:60%;" src="assets/imgs/research.gif" alt="Skills Carosel">
-        </div>
         <div class="row text-left">
             <!-- <div class="col-lg-4 col-12 col-md-6">
                 <div class="featured--card">
@@ -396,7 +428,6 @@
         </div>
     </div>
 </section>
-
 <!-- Hire me section -->
 <section class="bg-gray p-0 section" style="margin-top:40px">
     <div class="container">
@@ -422,7 +453,8 @@
 <section id="contact" class="position-relative section">
     <div class="container text-center">
         <h6 class="subtitle">Contact</h6>
-        <h6 class="section-title mb-4" style="color:black;  font-weight:bolder;font-family: Garamond, serif;">
+        <h6 class="section-title mb-4"
+            style="color:black;  text-decoration: underline #0d3f50; font-weight:bolder;font-family: Garamond, serif;">
             Get In Touch With Me</h6>
         <!-- <p class="mb-5 pb-4">OR<br> -->
         <!-- Email Us : Muhammadbilalshaikh00@gmail.com</p> -->
@@ -450,29 +482,25 @@
                 </form>
             </div>
             <div class="contact-infos">
-                <img style="margin-left:50px; margin-bottom:220px; height:93%; width:270px;"
-                    src="assets/imgs/contact.svg" alt="">
-                <div style="margin-top:-220px">
-                    <div class="item">
-                        <i class="ti-location-pin"></i>
-                        <div class="">
-                            <h5>Location</h5>
-                            <p style="color: black;"> Pakistan Asia.</p>
-                        </div>
+                <div class="item">
+                    <i class="ti-location-pin"></i>
+                    <div class="">
+                        <h5>Location</h5>
+                        <p style="color: black;"> Pakistan Asia.</p>
                     </div>
-                    <div class="item">
-                        <i class="ti-mobile"></i>
-                        <div>
-                            <h5>Phone Number</h5>
-                            <p style="color: black;">+923088505427</p>
-                        </div>
+                </div>
+                <div class="item">
+                    <i class="ti-mobile"></i>
+                    <div>
+                        <h5>Phone Number</h5>
+                        <p style="color: black;">+923088505427</p>
                     </div>
-                    <div class="item">
-                        <i class="ti-email"></i>
-                        <div class="mb-0">
-                            <h5>Email Address</h5>
-                            <p style="color: black;">Bilaldevelops00@gmail.com</p>
-                        </div>
+                </div>
+                <div class="item">
+                    <i class="ti-email"></i>
+                    <div class="mb-0">
+                        <h5>Email Address</h5>
+                        <p style="color: black;">Muhammadbilalshaikh00@gmail.com</p>
                     </div>
                 </div>
             </div>
@@ -486,24 +514,40 @@
     </div>
 </section>
 <!-- End of Contact Section -->
+<!-- Central Modal Medium Success -->
+<div class="modal fade" id="centralModalSuccess" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <!--Content-->
+        <div class="modal-content">
+            <!--Body-->
+            <div class="modal-body">
+                <div class="text-center">
+                    <form id="insertformview">
+                        <input type="text" hidden name="watch" id="watch">
+                        <button type="submit" id="Submit1" class="btn btn-primary btn-sm ">Let's Check</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Central Modal Medium Success-->
 
-<!--onload views form-->
-<form id="insertformview">
-    <input type="text" name="watch" id="watch" hidden>
-    <button type="submit" id="Submit1" class="btn btn-primary btn-sm " hidden>Let's Check</button>
-</form>
+
 
 <?php include 'footer.php'; ?>
 <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script>
+
 $('#insertform').submit(function() {
     var form = $('#insertform').serialize();
     event.preventDefault();
     $.ajax({
         type: "POST",
-        url: "Home/insertcontact",
+        url: "<?= base_url() ?>Home/insertcontact",
         data: form,
         success: function(data) {
             // swal("Thank You", "Your Message is Succesfully Sent.", "success");
@@ -533,7 +577,7 @@ $('#insertformview').submit(function() {
     event.preventDefault();
     $.ajax({
         type: "POST",
-        url: "Home/insertmodalview",
+        url: "<?= base_url() ?>Home/insertmodalview",
         data: form,
         success: function(data) {
             $('#close2').click();

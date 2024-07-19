@@ -1,36 +1,58 @@
-
-<footer>
-    <div class="footer clearfix mb-0 text-muted">
-        <div class="float-start">
-            <p>2023 &copy; Testing</p>
-        </div>
-        <div class="float-end">
-            <p>Crafted with <span class="text-danger"><i class="bi bi-heart"></i></span> by <a
-                    href="https://nenosofts.pk/bilaeldevelops">Bilael Develops</a></p>
-        </div>
+<footer class="footer">
+    <div class="d-sm-flex justify-content-center justify-content-sm-between">
+        <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Admin Panel Supported</span>
+        <span class="text-muted float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Copyright © <a
+                href="https://nenosofts.pk/bilaldevelops/" target="_blank">BilalDevelops </a>2023</span>
     </div>
 </footer>
+<!-- partial -->
 </div>
+<!-- main-panel ends -->
 </div>
+<!-- page-body-wrapper ends -->
 </div>
-<!-- {{-- js Cdns --}} -->
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-<!-- {{-- Ends --}} -->
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-<script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-<script src="assets/js/bootstrap.bundle.min.js"></script>
-<script src="assets/vendors/apexcharts/apexcharts.js"></script>
-<script src="assets/js/pages/dashboard.js"></script>
-<script src="assets/js/main.js"></script>
-<script src="assets/vendors/simple-datatables/simple-datatables.js"></script>
-<script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
-<script>
-    // Simple Datatable
-    let table1 = document.querySelector('#table1');
-    let dataTable = new simpleDatatables.DataTable(table1);
-</script>
-</div>
+<!-- container-scroller -->
+
+<!-- plugins:js -->
+<script src="<?= base_url() ?>assets/vendors/base/vendor.bundle.base.js"></script>
+<!-- endinject -->
+<!-- Plugin js for this page-->
+<script src="<?= base_url() ?>assets/vendors/chart.js/Chart.min.js"></script>
+<script src="<?= base_url() ?>assets/vendors/datatables.net/jquery.dataTables.js"></script>
+<script src="<?= base_url() ?>assets/vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+<!-- End plugin js for this page-->
+<!-- inject:js -->
+<script src="<?= base_url() ?>assets/js/off-canvas.js"></script>
+<script src="<?= base_url() ?>assets/js/hoverable-collapse.js"></script>
+<script src="<?= base_url() ?>assets/js/template.js"></script>
+<!-- endinject -->
+<!-- Custom js for this page-->
+<script src="<?= base_url() ?>assets/js/dashboard.js"></script>
+<script src="<?= base_url() ?>assets/js/data-table.js"></script>
+<script src="<?= base_url() ?>assets/js/jquery.dataTables.js"></script>
+<script src="<?= base_url() ?>assets/js/dataTables.bootstrap4.js"></script>
+<!-- End custom js for this page-->
+<script src="<?= base_url() ?>assets/js/sweetalert.js"></script>
+<script src="<?= base_url() ?>assets/js/jquery.cookie.js" type="text/javascript"></script>
+
+ <!-- General JS Scripts -->
+ <script src="assets2/js/app.min.js"></script>
+        <!-- JS Libraies -->
+        <!-- Page Specific JS File -->
+        <script src="assets2/bundles/datatables/datatables.min.js"></script>
+        <script src="assets2/bundles/datatables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js"></script>
+        <script src="assets2/bundles/datatables/export-tables/dataTables.buttons.min.js"></script>
+        <script src="assets2/bundles/datatables/export-tables/buttons.flash.min.js"></script>
+        <script src="assets2/bundles/datatables/export-tables/jszip.min.js"></script>
+        <script src="assets2/bundles/datatables/export-tables/pdfmake.min.js"></script>
+        <script src="assets2/bundles/datatables/export-tables/vfs_fonts.js"></script>
+        <script src="assets2/bundles/datatables/export-tables/buttons.print.min.js"></script>
+        <script src="assets2/js/page/datatables.js"></script>
+        <!-- Template JS File -->
+        <script src="assets2/js/scripts.js"></script>
+        <!-- Custom JS File -->
+        <script src="assets2/js/custom.js"></script>
+        <script src="assets2/js/sweetalert.js"></script>
 </body>
+
 </html>
